@@ -16,14 +16,17 @@ namespace Solution1.Module.DatabaseUpdate {
         }
         public override void UpdateDatabaseAfterUpdateSchema() {
             base.UpdateDatabaseAfterUpdateSchema();
+
+
             //string name = "MyName";
             //DomainObject1 theObject = ObjectSpace.FindObject<DomainObject1>(CriteriaOperator.Parse("Name=?", name));
             //if(theObject == null) {
-            //    theObject = ObjectSpace.CreateObject<DomainObject1>();
+            var aa= ObjectSpace.CreateObject<NewOrg>();
+            aa.Name = "NEw Name";
+            aa.Address1 = new Address((ObjectSpace as XPObjectSpace).Session) { City = "New York" };
             //    theObject.Name = name;
             //}
-
-			//ObjectSpace.CommitChanges(); //Uncomment this line to persist created object(s).
+			ObjectSpace.CommitChanges(); //Uncomment this line to persist created object(s).
         }
         public override void UpdateDatabaseBeforeUpdateSchema() {
             base.UpdateDatabaseBeforeUpdateSchema();

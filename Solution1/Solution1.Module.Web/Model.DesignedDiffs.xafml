@@ -1,9 +1,16 @@
-﻿<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
-  <Options CollectionsEditMode="Edit" />
-  <ViewItems>
-    <PropertyEditor Name="PropertyEditors">
-      <RegisteredPropertyEditor PropertyType="System.Drawing.Color" EditorType="DevExpress.ExpressApp.Web.Editors.ASPx.ASPxColorPickerPropertyEditor" />
-    </PropertyEditor>
-  </ViewItems>
+  <Views>
+    <ListView Id="NewOrg_ListView">
+      <Columns>
+        <ColumnInfo Id="Email" Index="-1" />
+        <ColumnInfo Id="FullName" Index="-1" />
+        <ColumnInfo Id="DisplayName" Width="128" />
+        <ColumnInfo Id="Address1" Index="1" />
+        <ColumnInfo Id="Profile" Index="2" />
+        <ColumnInfo Id="WebSite" Index="3" />
+        <ColumnInfo Id="Name" Index="4" />
+      </Columns>
+    </ListView>
+  </Views>
 </Application>
